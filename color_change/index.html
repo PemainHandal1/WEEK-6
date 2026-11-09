@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Exercise 01</title>
+
+    <style>
+        body {
+            text-align: center;
+            transition: background-color 0.4s ease; 
+            font-family: sans-serif;
+        }
+
+        .box {
+            width: 120px;
+            height: 120px;
+            margin: 20px auto;
+            border: 3px solid #333;
+            border-radius: 8px;
+            background-color: hsl(0, 100%, 50%);
+            transition: background-color 0.1s ease;
+        }
+        
+        .button-group {
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 8px 16px;
+            margin: 0 5px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .slider-container {
+            margin: 20px auto;
+            max-width: 300px;
+        }
+
+        /* The updated blue track slider */
+        #colorSlider {
+            -webkit-appearance: none;
+            appearance: none; 
+            width: 100%;
+            height: 15px;
+            border-radius: 5px;
+            background: dodgerblue; /* Changed from rainbow gradient to solid blue */
+            outline: none;
+            cursor: pointer;
+        }
+
+        /* The slider circular handle toggle button */
+        #colorSlider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none; 
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: white;
+            border: 2px solid #333;
+            cursor: pointer;
+        }
+
+        #colorSlider::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: white;
+            border: 2px solid #333;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Play with Spectrum Colors</h1>
+
+    <div class="button-group">
+        <button type="button" id="buttonChangeColor">Change color</button>
+        <button type="button" id="buttonRandomColor">Random color</button>
+    </div>
+
+    <div class="box"></div>
+
+    <div class="slider-container">
+        <input type="range" id="colorSlider" min="0" max="360" value="0" />
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+    
